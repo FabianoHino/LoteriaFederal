@@ -1,0 +1,147 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@section Scripts{
+    <script>
+        $(document ).ready(function(){
+            $("#btnConfirmar").click(confirmar);
+            $("#btnGerarJogo").click(gerarJogo);
+            $("#btnSortear").click(sortearJogo);
+
+            configuraJogo();
+    
+            
+    
+        });
+
+        function configuraJogo(){
+            $.ajax({
+              dataType: "json",
+              url: 'http://localhost:5000/api/Configura/',
+              success: function(data){
+
+                window.jogoConfig = data;
+    
+                chooseElements = ""
+                for (i = 1; i <=  data.numeroPossiveis; i++) {
+                    num = (i < 10) ? '0' + i.toString() : i.toString()
+                    chooseElements += "<div style='width:40px; float:left'><input type='checkbox' name='numeros' value='" + i + "'>" + num + "</div>" 
+                    if(i%10 == 0){
+                        chooseElements+= "<br style='clear:both'>"
+                    }
+                }
+                $("#chooseContent").append(chooseElements);
+
+
+    
+              }
+            });
+        }
+
+        function sortear(){
+            $.ajax({
+              dataType: "json",
+              url: 'http://localhost:5000/api/LoteriaFederal/',
+              success: function(data){
+                $('#jogosCriados').empty()
+                $.each(data, function(i, item){
+                    $('#jogosCriados').append("<p>Id:" + item.id + "<br />Numeros: " + item.numeros.toString() + "<br /> Data: " + item.data + "</p>" );
+                })
+              }
+            });
+        }
+        
+        function confirmar(){
+            qtdNumerosSelecionados = $("input[name='numeros']:checked").length;
+            numerosSelecionados = $.map($("input[name=numeros]:checked"), function(item){return item.value})
+
+            if(qtdNumerosSelecionados < window.jogoConfig.numeroMinimo || qtdNumerosSelecionados > window.jogoConfig.numeroMaximo){
+                alert("quantidade de numeros irregular");
+                return;
+            }
+
+            $.post('http://localhost:5000/api/LoteriaFederal/', {values:numerosSelecionados}).done(function() {
+              reload();
+            });
+        }
+
+        function gerarJogo(){
+            $("input[name=numeros]").removeAttr('checked');
+           
+            qtdNumeros = $("#qtoNumerosGerados").val();
+
+            if(qtdNumeros < window.jogoConfig.numeroMinimo || qtdNumeros > window.jogoConfig.numeroMaximo){
+                alert("quantidade de numeros irregular");
+                return; 
+            }
+            
+            var numerosGerados = []
+            var i = 0
+            while(i < qtdNumeros){
+                n = getRandomInt(1, window.jogoConfig.numeroPossiveis);
+                if($.inArray(n, numerosGerados) == -1 ){
+                    numerosGerados.push(n);
+                    i++;
+                }
+              
+            }
+            $.each(numerosGerados, function(i, item){
+                $("input[value=" + item + "]").prop('checked', 'checked')
+            })
+        }
+    
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function sortearJogo(){
+             $.ajax({
+              dataType: "json",
+              url: 'http://localhost:5000/api/Sorteio/',
+              success: function(data){
+                $('#resultado').empty()
+                $('#resultado').append("<p>Resultado: " + data + "</p>" );  
+              }
+            });
+        }
+    
+        function reload(){
+            $.ajax({
+              dataType: "json",
+              url: 'http://localhost:5000/api/LoteriaFederal/',
+              success: function(data){
+                $('#jogosCriados').empty()
+                $.each(data, function(i, item){
+                     $('#jogosCriados').append("<p>Id:" + item.id + "<br />Numeros: " + item.numeros.toString() + "<br /> Data: " + item.data + "</p>" );
+                })
+              }
+            });
+        }
+
+    </script>
+}
+<br/>
+<br/>
+<br/>
+<div id="chooseContent">
+    
+</div>
+
+<div id="jogosCriados">
+
+</div>
+
+<p>
+    <label>Quantidade de Numeros:</label>
+    <input type="number" name="qtoNumerosGerados" id="qtoNumerosGerados"/>
+    <button id="btnGerarJogo" value="btnGerarJogo" name="btnGerarJogo">Gerar Jogo</button>
+</p>
+<button id="btnConfirmar" value="Confirmar" name="Confirmar">Confirmar Jogo</button>
+<button id="btnSortear" value="Sortear" name="btnSortear">Sortear Numeros</button> 
+<br />
+<div id="resultado">
+
+</div>

@@ -1,0 +1,11 @@
+/Users/fabianohino/Projects/LoteriaFederal/web/bin/Debug/netcoreapp2.0/web.deps.json
+/Users/fabianohino/Projects/LoteriaFederal/web/bin/Debug/netcoreapp2.0/web.runtimeconfig.json
+/Users/fabianohino/Projects/LoteriaFederal/web/bin/Debug/netcoreapp2.0/web.runtimeconfig.dev.json
+/Users/fabianohino/Projects/LoteriaFederal/web/bin/Debug/netcoreapp2.0/web.dll
+/Users/fabianohino/Projects/LoteriaFederal/web/bin/Debug/netcoreapp2.0/web.pdb
+/Users/fabianohino/Projects/LoteriaFederal/web/obj/Debug/netcoreapp2.0/web.csproj.CoreCompileInputs.cache
+/Users/fabianohino/Projects/LoteriaFederal/web/obj/Debug/netcoreapp2.0/web.AssemblyInfoInputs.cache
+/Users/fabianohino/Projects/LoteriaFederal/web/obj/Debug/netcoreapp2.0/web.AssemblyInfo.cs
+/Users/fabianohino/Projects/LoteriaFederal/web/obj/Debug/netcoreapp2.0/web.dll
+/Users/fabianohino/Projects/LoteriaFederal/web/obj/Debug/netcoreapp2.0/web.pdb
+/Users/fabianohino/Projects/LoteriaFederal/web/obj/Debug/netcoreapp2.0/web.csprojResolveAssemblyReference.cache

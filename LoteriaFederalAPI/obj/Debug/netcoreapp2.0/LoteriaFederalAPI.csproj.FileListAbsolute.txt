@@ -1,0 +1,11 @@
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/bin/Debug/netcoreapp2.0/LoteriaFederalAPI.deps.json
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/bin/Debug/netcoreapp2.0/LoteriaFederalAPI.runtimeconfig.json
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/bin/Debug/netcoreapp2.0/LoteriaFederalAPI.runtimeconfig.dev.json
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/bin/Debug/netcoreapp2.0/LoteriaFederalAPI.dll
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/bin/Debug/netcoreapp2.0/LoteriaFederalAPI.pdb
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/obj/Debug/netcoreapp2.0/LoteriaFederalAPI.csprojResolveAssemblyReference.cache
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/obj/Debug/netcoreapp2.0/LoteriaFederalAPI.csproj.CoreCompileInputs.cache
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/obj/Debug/netcoreapp2.0/LoteriaFederalAPI.AssemblyInfoInputs.cache
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/obj/Debug/netcoreapp2.0/LoteriaFederalAPI.AssemblyInfo.cs
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/obj/Debug/netcoreapp2.0/LoteriaFederalAPI.dll
+/Users/fabianohino/Projects/LoteriaFederal/LoteriaFederalAPI/obj/Debug/netcoreapp2.0/LoteriaFederalAPI.pdb

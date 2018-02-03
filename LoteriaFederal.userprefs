@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{E2EDBF99-3814-4B25-9D40-D7C6F0032B58}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LoteriaFederalAPI/Controllers/LoteriaFederalController.cs">
+    <Files>
+      <File FileName="web/Pages/Index.cshtml" Line="23" Column="42" />
+      <File FileName="LoteriaFederalAPI/Model/MegaSena.cs" Line="17" Column="10" />
+      <File FileName="LoteriaFederalAPI/Controllers/LoteriaFederalController.cs" Line="1" Column="1" />
+      <File FileName="LoteriaFederalAPI/Program.cs" Line="23" Column="40" />
+      <File FileName="LoteriaFederalAPI/Model/Aposta.cs" Line="18" Column="27" />
+      <File FileName="LoteriaFederalAPI/Controllers/SorteioController.cs" Line="19" Column="32" />
+      <File FileName="web/Program.cs" Line="23" Column="17" />
+      <File FileName="LoteriaFederalAPI/Model/IJogoInterface.cs" Line="20" Column="10" />
+      <File FileName="LoteriaFederalAPI/Controllers/ConfiguraController.cs" Line="18" Column="33" />
+      <File FileName="LoteriaFederalAPI/Model/EmptyClass.cs" Line="2" Column="1" />
+      <File FileName="LoteriaFederalAPI/Model/Lotofacil.cs" Line="16" Column="30" />
+      <File FileName="LoteriaFederalAPI/Startup.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LoteriaFederalAPI PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
